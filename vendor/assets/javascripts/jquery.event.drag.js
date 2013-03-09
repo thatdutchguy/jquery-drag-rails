@@ -176,8 +176,8 @@ drag = $special.drag = {
 		// handle various events
 		switch ( event.type ){
 			// mousemove, check distance, start dragging
-			case !dd.dragging && 'touchmove':
-				event.preventDefault();
+			// case !dd.dragging && 'touchmove':
+				// event.preventDefault();
 			case !dd.dragging && 'mousemove':
 
 				if ( Math.pow(  event.pageX-dd.pageX, 2 ) + Math.pow(  event.pageY-dd.pageY, 2 ) < Math.pow( dd.distance, 2 ) )
@@ -187,8 +187,8 @@ drag = $special.drag = {
 				if ( dd.propagates ) // "dragstart" not rejected
 					dd.dragging = true; // activate interaction
 			// mousemove, dragging
-			case 'touchmove':
-				event.preventDefault();
+			// case 'touchmove':
+				// event.preventDefault();
 			case 'mousemove':
 				if ( dd.dragging ){
 					// trigger "drag"
